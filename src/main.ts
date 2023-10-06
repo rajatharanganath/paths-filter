@@ -68,6 +68,8 @@ async function getChangedFiles(token: string, base: string, ref: string, initial
     return await git.getChangesOnHead()
   }
 
+  core.info('token passed')
+  core.info(token)
   const prEvents = ['pull_request', 'pull_request_review', 'pull_request_review_comment', 'pull_request_target']
   if (prEvents.includes(github.context.eventName)) {
     if (ref) {
