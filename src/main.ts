@@ -19,6 +19,8 @@ async function run(): Promise<void> {
       process.chdir(workingDirectory)
     }
 
+    core.info("Im here")
+    core.info(core.getInput('token', {required: false}))
     const token = core.getInput('token', {required: false})
     const ref = core.getInput('ref', {required: false})
     const base = core.getInput('base', {required: false})
