@@ -13,7 +13,13 @@ import {csvEscape} from './list-format/csv-escape'
 type ExportFormat = 'none' | 'csv' | 'json' | 'shell' | 'escape'
 
 async function run(): Promise<void> {
+
+  core.info("Im here 1")
+  
   try {
+
+    core.info("Im here 2")
+    
     const workingDirectory = core.getInput('working-directory', {required: false})
     if (workingDirectory) {
       process.chdir(workingDirectory)
